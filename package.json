@@ -1,0 +1,27 @@
+{
+  "name": "icejax",
+  "description": "little iced-style ajax lib to include in browserified projects",
+  "keywords": [
+    "ajax",
+    "keybase"
+  ],
+  "author": "Chris Coyne",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "./lib/main.js",
+  "directories": {
+    "lib": "lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/keybase/icejax.git"
+  },
+  "dependencies": {
+    "browserify": "^5.10.1",
+    "iced-coffee-script": "^1.7.1-f",
+    "iced-test": "0.0.17",
+    "icsify": "^0.6.0",
+    "uglify-js": "^2.4.15"
+  },
+  "devDependencies": {}
+}
