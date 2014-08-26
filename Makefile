@@ -28,5 +28,5 @@ release: $(BROWSER)
 clean:
 	rm -rf lib/* browser/* rel/* $(BUILD_STAMP)
 
-.PHONY: clean
+.PHONY: clean release build
 
