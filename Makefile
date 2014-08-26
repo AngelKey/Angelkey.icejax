@@ -26,4 +26,7 @@ release: $(BROWSER)
 	$(UGLIFYJS) -c < rel/icejax-$$V.js > rel/icejax-$$V-min.js
 
 clean:
-	rm -rf lib/* browsr/* rel/* $(BUILD_STAMP)
+	rm -rf lib/* browser/* rel/* $(BUILD_STAMP)
+
+.PHONY: clean
+
