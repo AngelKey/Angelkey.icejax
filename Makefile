@@ -13,9 +13,9 @@ BROWSER=browser/icejax.js
 
 build: $(BUILD_STAMP) release
 
-libs: $(BUILD_STAMP) \
-	lib/main.js \
+libs: lib/main.js \
 	lib/icejax.js
+	date > $(BUILD_STAMP)
 
 $(BROWSER): lib/main.js $(BUILD_STAMP)
 	$(BROWSERIFY) -s icejax $< > $@
