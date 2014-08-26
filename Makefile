@@ -17,10 +17,10 @@ $(BUILD_STAMP) : lib/main.js \
 	lib/icejax.js
 	date > $(BUILD_STAMP)
 
-$(BROWSER): lib/main.js $(BUILD_STAMP)
-	$(BROWSERIFY) -s icejax $< > $@
+$(BROWSER): $(BUILD_STAMP)
+	$(BROWSERIFY) -s icejax lib/main.js > $@
 
-release: $(BUILD_STAMP) $(BROWSER)
+release: $(BROWSER)
 	V=`jsonpipe < package.json | grep version | awk '{ print $$2 }' | sed -e s/\"//g` ; \
 	cp $(BROWSER) rel/icejax-$$V.js ; \
 	$(UGLIFYJS) -c < rel/icejax-$$V.js > rel/icejax-$$V-min.js
